@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Epic Frames | Legendary Anime & Movie Moments</title>
+    <title>Cinematic Dreams | Anime & Movie Gallery</title>
     <style>
-        /* ===== Modern Clean Reset ===== */
+        /* Modern Clean Reset */
         * {
             margin: 0;
             padding: 0;
@@ -20,14 +20,14 @@
             line-height: 1.6;
         }
 
-        /* ===== Main Gallery Container ===== */
+        /* Main Gallery Container */
         .gallery-container {
             max-width: 1400px;
             margin: 0 auto;
             padding: 2rem;
         }
 
-        /* ===== Header ===== */
+        /* Header */
         .gallery-header {
             text-align: center;
             margin-bottom: 3rem;
@@ -56,7 +56,7 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
-        /* ===== Gallery Grid ===== */
+        /* Gallery Grid */
         .gallery-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -64,7 +64,7 @@
             padding: 1rem 0;
         }
 
-        /* ===== Gallery Item (Anime/Movie Card) ===== */
+        /* Gallery Item */
         .gallery-item {
             position: relative;
             overflow: hidden;
@@ -124,7 +124,7 @@
             opacity: 0.8;
         }
 
-        /* ===== Lightbox (Fullscreen View) ===== */
+        /* Lightbox */
         .lightbox {
             position: fixed;
             top: 0;
@@ -178,7 +178,7 @@
             color: #f9cb28;
         }
 
-        /* ===== Lightbox Navigation Buttons ===== */
+        /* Navigation Buttons */
         .lightbox-close, .lightbox-nav {
             position: absolute;
             color: white;
@@ -219,7 +219,7 @@
             right: 25px;
         }
 
-        /* ===== Filter & Search Controls ===== */
+        /* Controls */
         .gallery-controls {
             display: flex;
             justify-content: center;
@@ -281,7 +281,7 @@
             transform: scale(1.02);
         }
 
-        /* ===== Loading Animation ===== */
+        /* Loading Animation */
         .loader {
             display: none;
             width: 50px;
@@ -297,7 +297,7 @@
             to { transform: rotate(360deg); }
         }
 
-        /* ===== Responsive Design ===== */
+        /* Responsive */
         @media (max-width: 768px) {
             .gallery-grid {
                 grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
@@ -327,8 +327,8 @@
 <body>
     <div class="gallery-container">
         <header class="gallery-header">
-            <h1>Epic Frames</h1>
-            <p>Legendary moments from anime and cinema history</p>
+            <h1>Cinematic Dreams</h1>
+            <p>Explore the most stunning anime and movie artworks</p>
         </header>
 
         <div class="search-container">
@@ -340,7 +340,7 @@
             <button class="filter-btn active" data-filter="all">All</button>
             <button class="filter-btn" data-filter="anime">Anime</button>
             <button class="filter-btn" data-filter="movies">Movies</button>
-            <button class="filter-btn" data-filter="fantasy">Fantasy</button>
+
         </div>
 
         <div class="loader"></div>
@@ -363,105 +363,198 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            // Curated collection of guaranteed working images
+            // Curated collection with your requested titles
             const images = [
-                { 
-                    id: 1, 
-                    src: 'https://wallpapercave.com/wp/wp12879974.jpg', 
-                    alt: 'Demon Slayer wallpaper', 
-                    category: 'anime',
-                    title: 'Demon Slayer',
-                    description: 'Tanjiro vs Rui battle'
-                },
-                { 
-                    id: 2, 
-                    src: 'https://wallpapercave.com/wp/wp12046834.jpg', 
-                    alt: 'Harry Potter wallpaper', 
-                    category: 'fantasy',
-                    title: 'Harry Potter',
-                    description: 'Hogwarts castle at night'
-                },
-                { 
-                    id: 3, 
-                    src: 'https://wallpapercave.com/wp/wp12879920.jpg', 
-                    alt: 'Attack on Titan wallpaper', 
-                    category: 'anime',
-                    title: 'Attack on Titan',
-                    description: 'Eren's Titan form'
-                },
-                { 
-                    id: 4, 
-                    src: 'https://wallpapercave.com/wp/wp12879921.jpg', 
-                    alt: 'Jujutsu Kaisen wallpaper', 
-                    category: 'anime',
-                    title: 'Jujutsu Kaisen',
-                    description: 'Gojo Satoru domain expansion'
-                },
-                { 
-                    id: 5, 
-                    src: 'https://wallpapercave.com/wp/wp12879922.jpg', 
-                    alt: 'Star Wars wallpaper', 
-                    category: 'movies',
-                    title: 'Star Wars',
-                    description: 'Millennium Falcon in hyperspace'
-                },
-                { 
-                    id: 6, 
-                    src: 'https://wallpapercave.com/wp/wp12879923.jpg', 
-                    alt: 'Lord of the Rings wallpaper', 
-                    category: 'fantasy',
-                    title: 'Lord of the Rings',
-                    description: 'Gandalf at Minas Tirith'
-                },
-                { 
-                    id: 7, 
-                    src: 'https://wallpapercave.com/wp/wp12879924.jpg', 
-                    alt: 'Spider-Man wallpaper', 
-                    category: 'movies',
-                    title: 'Spider-Man',
-                    description: 'Into the Spider-Verse art'
-                },
-                { 
-                    id: 8, 
-                    src: 'https://wallpapercave.com/wp/wp12879925.jpg', 
-                    alt: 'Naruto wallpaper', 
-                    category: 'anime',
-                    title: 'Naruto Shippuden',
-                    description: 'Naruto vs Pain battle'
-                },
-                { 
-                    id: 9, 
-                    src: 'https://wallpapercave.com/wp/wp12879926.jpg', 
-                    alt: 'Avengers wallpaper', 
-                    category: 'movies',
-                    title: 'Avengers Endgame',
-                    description: 'Final battle scene'
-                },
-                { 
-                    id: 10, 
-                    src: 'https://wallpapercave.com/wp/wp12879927.jpg', 
-                    alt: 'One Piece wallpaper', 
-                    category: 'anime',
-                    title: 'One Piece',
-                    description: 'Luffy Gear 5 transformation'
-                },
-                { 
-                    id: 11, 
-                    src: 'https://wallpapercave.com/wp/wp12879928.jpg', 
-                    alt: 'Dune wallpaper', 
-                    category: 'movies',
-                    title: 'Dune',
-                    description: 'Paul Atreides on Arrakis'
-                },
-                { 
-                    id: 12, 
-                    src: 'https://wallpapercave.com/wp/wp12879929.jpg', 
-                    alt: 'Studio Ghibli wallpaper', 
-                    category: 'anime',
-                    title: 'Spirited Away',
-                    description: 'Chihiro in the spirit world'
-                }
-            ];
+    // Anime Section (10 items)
+    { 
+        id: 1, 
+        src: 'https://i.pinimg.com/736x/8c/40/4c/8c404c236ac042ad7fa5e9243fe5a246.jpg', 
+        alt: 'Demon Slayer poster', 
+        category: 'anime',
+        title: 'Demon Slayer',
+        description: 'Kimetsu no Yaiba: Mugen Train Arc'
+    },
+    { 
+        id: 2, 
+        src: 'https://image.tmdb.org/t/p/w500/geCRueV3ElhRTr0xtJuEWJt6dJ1.jpg', 
+        alt: 'Solo Leveling poster', 
+        category: 'anime',
+        title: 'Solo Leveling',
+        description: 'I Alone Level Up adaptation'
+    },
+    { 
+        id: 3, 
+        src: 'https://image.tmdb.org/t/p/w500/npdB6eFzizki0WaZ1OvKcJrWe97.jpg', 
+        alt: 'Chainsaw Man poster', 
+        category: 'anime',
+        title: 'Chainsaw Man',
+        description: 'Denji becomes Chainsaw Devil'
+    },
+    { 
+        id: 4, 
+        src: 'https://image.tmdb.org/t/p/w500/q719jXXEzOoYaps6babgKnONONX.jpg', 
+        alt: 'Your Name poster', 
+        category: 'anime',
+        title: 'Your Name',
+        description: 'Body-swapping romance'
+    },
+    { 
+        id: 5, 
+        src: 'https://i.pinimg.com/736x/c4/cb/57/c4cb5734c7c94d3413efdaa3bca09a6d.jpg', 
+        alt: 'Attack on Titan poster', 
+        category: 'anime',
+        title: 'Attack on Titan',
+        description: 'Final Season Part 3'
+    },
+    { 
+        id: 6, 
+        src: 'https://i.pinimg.com/736x/26/66/5c/26665c12d6c84f439e0b9dc35b01a58a.jpg', 
+        alt: 'Naruto poster', 
+        category: 'anime',
+        title: 'Naruto Shippuden',
+        description: 'Ninja adventure series'
+    },
+    { 
+        id: 7, 
+        src: 'https://i.pinimg.com/474x/01/5f/de/015fdefde52a9d50c247e299646dd0c4.jpg', 
+        alt: 'Jujutsu Kaisen poster', 
+        category: 'anime',
+        title: 'Jujutsu Kaisen',
+        description: 'Sorcery fight series'
+    },
+    { 
+        id: 8, 
+        src: 'https://i.pinimg.com/474x/65/e9/a6/65e9a662394181e7ac4632cf202c2671.jpg', 
+        alt: 'One Piece poster', 
+        category: 'anime',
+        title: 'One Piece Film: Red',
+        description: 'Luffy battles new enemy'
+    },
+    { 
+        id: 9, 
+        src: 'https://i.pinimg.com/474x/a3/d1/19/a3d11999770f29512dfa50d733f5558b.jpg', 
+        alt: 'Spy x Family poster', 
+        category: 'anime',
+        title: 'Spy x Family',
+        description: 'Undercover family comedy'
+    },
+    { 
+        id: 10, 
+        src: 'https://i.pinimg.com/736x/f2/29/14/f229145d944f48947b2cdf1bcb631160.jpg', 
+        alt: 'Suzume poster', 
+        category: 'anime',
+        title: 'Suzume',
+        description: 'Door-hopping adventure'
+    },
+
+    // Movies Section (13 items)
+    { 
+        id: 11, 
+        src: 'https://image.tmdb.org/t/p/w500/8b8R8l88Qje9dn9OE8PY05Nxl1X.jpg', 
+        alt: 'Dune poster', 
+        category: 'movies',
+        title: 'Dune: Part Two',
+        description: 'Desert planet warfare'
+    },
+    { 
+        id: 12, 
+        src: 'https://i.pinimg.com/474x/a2/20/a0/a220a0a437fccf421ed9d25743b2a871.jpg', 
+        alt: 'Deadpool poster', 
+        category: 'movies',
+        title: 'Deadpool & Wolverine',
+        description: 'Mercenary meets mutant'
+    },
+    { 
+        id: 13, 
+        src: 'https://i.pinimg.com/736x/29/a4/da/29a4da565e04e1a2d8fc459e1996f229.jpg', 
+        alt: 'Final Destination poster', 
+        category: 'movies',
+        title: 'Final Destination',
+        description: 'Cheating death horror'
+    },
+    { 
+        id: 14, 
+        src: 'https://i.pinimg.com/736x/b2/38/1a/b2381ac9a61a4761d3c12ef4af9cb005.jpg', 
+        alt: 'Evil Dead poster', 
+        category: 'movies',
+        title: 'Evil Dead Rise',
+        description: 'Gory cabin horror'
+    },
+    { 
+        id: 15, 
+        src: 'https://i.pinimg.com/474x/3f/ef/03/3fef032b6540a5bb63fd708c63dfd627.jpg', 
+        alt: 'Back to Future poster', 
+        category: 'movies',
+        title: 'Back to the Future',
+        description: 'Time travel classic'
+    },
+    { 
+        id: 16, 
+        src: 'https://image.tmdb.org/t/p/w500/uDO8zWDhfWwoFdKS4fzkUJt0Rf0.jpg', 
+        alt: 'La La Land poster', 
+        category: 'movies',
+        title: 'La La Land',
+        description: 'Musical romance'
+    },
+    { 
+        id: 17, 
+        src: 'https://i.pinimg.com/474x/65/7f/f4/657ff440d35ea5be8a0ffe32f4a2552a.jpg', 
+        alt: 'Mitchells poster', 
+        category: 'movies',
+        title: 'The Mitchells vs The Machines',
+        description: 'Animated family film'
+    },
+    { 
+        id: 18, 
+        src: 'https://i.pinimg.com/474x/a7/be/a1/a7bea1f1fd722b0b35e6dae3751b10bf.jpg', 
+        alt: 'Tarot poster', 
+        category: 'movies',
+        title: 'Tarot (2024)',
+        description: 'Cursed cards horror'
+    },
+    { 
+        id: 19, 
+        src: 'https://i.pinimg.com/736x/78/9c/87/789c87f5e4188a0735099ba6aa74ae15.jpg', 
+        alt: 'Creed poster', 
+        category: 'movies',
+        title: 'Creed III',
+        description: 'Boxing drama'
+    },
+    { 
+        id: 20, 
+        src: 'https://image.tmdb.org/t/p/w500/v28T5F1IygM8vXWZIycfNEm3xcL.jpg', 
+        alt: 'Fall poster', 
+        category: 'movies',
+        title: 'Fall',
+        description: 'Height survival thriller'
+    },
+    { 
+        id: 21, 
+        src: 'https://i.pinimg.com/736x/87/93/0d/87930dda3ad01661d0fbc6d7fa9f259e.jpg', 
+        alt: 'Klaus poster', 
+        category: 'movies',
+        title: 'Klaus',
+        description: 'Santa origin story'
+    },
+    { 
+        id: 22, 
+        src: 'https://i.pinimg.com/736x/93/b2/ec/93b2ec2431ea0ae34a2dbafc81a1d72e.jpg', 
+        alt: 'Sinners poster', 
+        category: 'movies',
+        title: 'Sinners',
+        description: 'Psychological thriller'
+    },
+    { 
+        id: 23, 
+        src: 'https://i.pinimg.com/736x/9c/28/6d/9c286d15bc15fb2580b053d91b22bca8.jpg', 
+        alt: 'Wild Robot poster', 
+        category: 'movies',
+        title: 'The Wild Robot',
+        description: 'Animated adventure'
+    },
+
+
+];
 
             // DOM Elements
             const galleryGrid = document.querySelector('.gallery-grid');
