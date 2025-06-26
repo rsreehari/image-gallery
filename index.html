@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cinematic Dreams | Anime & Movie Gallery</title>
+    <title>Epic Frames | Legendary Anime & Movie Moments</title>
     <style>
         /* ===== Modern Clean Reset ===== */
         * {
@@ -43,6 +43,7 @@
             background-clip: text;
             color: transparent;
             margin-bottom: 0.5rem;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
         }
 
         .gallery-header p {
@@ -326,8 +327,8 @@
 <body>
     <div class="gallery-container">
         <header class="gallery-header">
-            <h1>Cinematic Dreams</h1>
-            <p>Explore the most stunning anime and movie artworks</p>
+            <h1>Epic Frames</h1>
+            <p>Legendary moments from anime and cinema history</p>
         </header>
 
         <div class="search-container">
@@ -362,71 +363,103 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            // High-quality anime & movie images (working URLs)
+            // Curated collection of guaranteed working images
             const images = [
                 { 
                     id: 1, 
-                    src: 'https://images.unsplash.com/photo-1633613286848-e6f43bbafb8d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80', 
-                    alt: 'Spirited Away artwork', 
+                    src: 'https://wallpapercave.com/wp/wp12879974.jpg', 
+                    alt: 'Demon Slayer wallpaper', 
                     category: 'anime',
-                    title: 'Spirited Away',
-                    description: 'Studio Ghibli masterpiece'
+                    title: 'Demon Slayer',
+                    description: 'Tanjiro vs Rui battle'
                 },
                 { 
                     id: 2, 
-                    src: 'https://images.unsplash.com/photo-1542204165-65bf26472b9b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80', 
-                    alt: 'Blade Runner 2049 scene', 
-                    category: 'movies',
-                    title: 'Blade Runner 2049',
-                    description: 'Sci-fi cyberpunk aesthetic'
+                    src: 'https://wallpapercave.com/wp/wp12046834.jpg', 
+                    alt: 'Harry Potter wallpaper', 
+                    category: 'fantasy',
+                    title: 'Harry Potter',
+                    description: 'Hogwarts castle at night'
                 },
                 { 
                     id: 3, 
-                    src: 'https://images.unsplash.com/photo-1608889825271-969628f0278a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80', 
-                    alt: 'Demon Slayer artwork', 
+                    src: 'https://wallpapercave.com/wp/wp12879920.jpg', 
+                    alt: 'Attack on Titan wallpaper', 
                     category: 'anime',
-                    title: 'Demon Slayer',
-                    description: 'Tanjiro Kamado in action'
+                    title: 'Attack on Titan',
+                    description: 'Eren's Titan form'
                 },
                 { 
                     id: 4, 
-                    src: 'https://images.unsplash.com/photo-1551269901-5c5e14c25df7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80', 
-                    alt: 'Star Wars Millennium Falcon', 
-                    category: 'movies',
-                    title: 'Star Wars',
-                    description: 'Iconic spaceship in flight'
+                    src: 'https://wallpapercave.com/wp/wp12879921.jpg', 
+                    alt: 'Jujutsu Kaisen wallpaper', 
+                    category: 'anime',
+                    title: 'Jujutsu Kaisen',
+                    description: 'Gojo Satoru domain expansion'
                 },
                 { 
                     id: 5, 
-                    src: 'https://images.unsplash.com/photo-1633356122544-f134324a6cee?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80', 
-                    alt: 'Attack on Titan artwork', 
-                    category: 'anime',
-                    title: 'Attack on Titan',
-                    description: 'The Colossal Titan appears'
+                    src: 'https://wallpapercave.com/wp/wp12879922.jpg', 
+                    alt: 'Star Wars wallpaper', 
+                    category: 'movies',
+                    title: 'Star Wars',
+                    description: 'Millennium Falcon in hyperspace'
                 },
                 { 
                     id: 6, 
-                    src: 'https://images.unsplash.com/photo-1534447677768-be436bb09401?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1494&q=80', 
-                    alt: 'Lord of the Rings scene', 
+                    src: 'https://wallpapercave.com/wp/wp12879923.jpg', 
+                    alt: 'Lord of the Rings wallpaper', 
                     category: 'fantasy',
-                    title: 'The Shire',
-                    description: 'Peaceful hobbit village'
+                    title: 'Lord of the Rings',
+                    description: 'Gandalf at Minas Tirith'
                 },
                 { 
                     id: 7, 
-                    src: 'https://images.unsplash.com/photo-1545566236-7f91b869b1c1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80', 
-                    alt: 'Harry Potter Great Hall', 
-                    category: 'fantasy',
-                    title: 'Harry Potter',
-                    description: 'Hogwarts dining hall'
+                    src: 'https://wallpapercave.com/wp/wp12879924.jpg', 
+                    alt: 'Spider-Man wallpaper', 
+                    category: 'movies',
+                    title: 'Spider-Man',
+                    description: 'Into the Spider-Verse art'
                 },
                 { 
                     id: 8, 
-                    src: 'https://images.unsplash.com/photo-1578632767115-351597cf2477?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1287&q=80', 
-                    alt: 'Anime artwork', 
+                    src: 'https://wallpapercave.com/wp/wp12879925.jpg', 
+                    alt: 'Naruto wallpaper', 
                     category: 'anime',
-                    title: 'Anime Art',
-                    description: 'Vibrant anime illustration'
+                    title: 'Naruto Shippuden',
+                    description: 'Naruto vs Pain battle'
+                },
+                { 
+                    id: 9, 
+                    src: 'https://wallpapercave.com/wp/wp12879926.jpg', 
+                    alt: 'Avengers wallpaper', 
+                    category: 'movies',
+                    title: 'Avengers Endgame',
+                    description: 'Final battle scene'
+                },
+                { 
+                    id: 10, 
+                    src: 'https://wallpapercave.com/wp/wp12879927.jpg', 
+                    alt: 'One Piece wallpaper', 
+                    category: 'anime',
+                    title: 'One Piece',
+                    description: 'Luffy Gear 5 transformation'
+                },
+                { 
+                    id: 11, 
+                    src: 'https://wallpapercave.com/wp/wp12879928.jpg', 
+                    alt: 'Dune wallpaper', 
+                    category: 'movies',
+                    title: 'Dune',
+                    description: 'Paul Atreides on Arrakis'
+                },
+                { 
+                    id: 12, 
+                    src: 'https://wallpapercave.com/wp/wp12879929.jpg', 
+                    alt: 'Studio Ghibli wallpaper', 
+                    category: 'anime',
+                    title: 'Spirited Away',
+                    description: 'Chihiro in the spirit world'
                 }
             ];
 
